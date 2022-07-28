@@ -9,6 +9,9 @@ import random
 import csv
 import SimpleITK as sitk
 
+def radiograph_dataset_s():
+    return torch.load("/playpen/tgreer/radio_dataset")
+
 
 def dxa_dataset():
     roots = glob.glob("dxa2d_processed/dxa2d/*")
