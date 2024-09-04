@@ -14,7 +14,7 @@ def radiograph_dataset_s():
 
 
 def dxa_dataset():
-    roots = glob.glob("dxa2d_processed/dxa2d/*")
+    roots = glob.glob("/playpen-raid1/tgreer/dxa_radiograph/dxa2d_processed/dxa2d/*")
 
     paths = [sorted(glob.glob(f"{root}/*.dcm")) for root in roots]
 
@@ -58,7 +58,7 @@ def dxa_dataset():
     return big_enough_knees, test_imgs
 
 def radiograph_dataset():
-    r = csv.reader(open("./radiographs.csv"))
+    r = csv.reader(open("/playpen-raid1/tgreer/dxa_radiograph/radiographs.csv"))
     radiograph_info = list(r)
     images = []
     for i in range(1000):
